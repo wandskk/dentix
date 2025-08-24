@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HeaderNavigation } from "./headerNavigation";
+import { HeaderNavigation } from "./index";
 import { Logo } from "@/components/common/logo";
 
 export function Header() {

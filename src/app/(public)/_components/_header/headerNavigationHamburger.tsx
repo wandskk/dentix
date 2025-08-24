@@ -10,10 +10,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import { HeaderNavigationLinks } from "./headerNavigationLinks";
+import { HeaderNavigationLinks } from "./index";
 import React from "react";
 
-export function HeaderNavigationHamburguer() {
+export function HeaderNavigationHamburger() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (

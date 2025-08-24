@@ -1,12 +1,12 @@
-import { HeaderNavigationLinks } from "./headerNavigationLinks";
-import { HeaderNavigationHamburguer } from "./headerNavigationHamburguer";
+import { HeaderNavigationLinks } from "./index";
+import { HeaderNavigationHamburger } from "./index";
 
 export function HeaderNavigation() {
   return (
     <>
       <HeaderNavigationLinks className="hidden md:flex items-center space-x-4" />
 
-      <HeaderNavigationHamburguer />
+      <HeaderNavigationHamburger />
     </>
   );
 }
