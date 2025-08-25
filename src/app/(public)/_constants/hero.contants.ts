@@ -4,7 +4,7 @@ export const HERO_CONSTANTS = {
     "Sistema completo de gestão para clínicas odontológicas. Agende consultas, gerencie pacientes, controle financeiro e muito mais em uma plataforma intuitiva e segura.",
   button: {
     label: "Começar agora",
-    href: "/cadastro",
+    href: "/#profissionais",
     title: "Começar agora",
   },
   badge: {
