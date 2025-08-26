@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/utils";
 import { CommonProps } from "@/types/components";
 import React from "react";
 

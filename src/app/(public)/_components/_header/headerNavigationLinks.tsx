@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils/utils";
 import Link from "next/link";
 import { HEADER_CONSTANTS } from "../../_constants/header.constants";
 import { Button } from "@/components/ui/button";
@@ -17,15 +17,15 @@ export function HeaderNavigationLinks({
   const session = false;
 
   return (
-    <nav className={cn(className)} aria-label="Navegação" role="navigation">
-      <ul className="flex flex-col items-center gap-4 flex-wrap md:flex-row w-100 justify-end">
+    <nav className={cn(className)} aria-label="Navegação principal" role="navigation">
+      <ul className="flex flex-col items-center gap-4 flex-wrap md:flex-row w-full justify-end">
         {LINKS.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
               title={link.title}
               onClick={onItemClick}
-              className="text-base"
+              className="text-base font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm px-2 py-1"
             >
               {link.label}
             </Link>
@@ -38,19 +38,19 @@ export function HeaderNavigationLinks({
               href={BUTTONS.LOGGED_IN.HREF}
               title={BUTTONS.LOGGED_IN.TITLE}
               onClick={onItemClick}
-              className="text-base"
+              className="text-base font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm px-2 py-1"
             >
               {BUTTONS.LOGGED_IN.LABEL}
             </Link>
           ) : (
-            <Button asChild>
+            <Button asChild className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
               <Link
                 href={BUTTONS.LOGGED_OUT.HREF}
                 title={BUTTONS.LOGGED_OUT.TITLE}
                 onClick={onItemClick}
-                className="text-base"
+                className="text-base font-medium"
               >
-                <LogIn className="w-4 h-4" />
+                <LogIn className="w-4 h-4 mr-2" />
                 {BUTTONS.LOGGED_OUT.LABEL}
               </Link>
             </Button>
