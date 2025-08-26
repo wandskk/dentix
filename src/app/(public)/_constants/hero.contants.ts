@@ -1,3 +1,5 @@
+import { HeroStat, SocialProofUser, FloatingElement } from "../_components/_types";
+
 export const HERO_CONSTANTS = {
   title: "Transforme sua clínica odontológica",
   description:
@@ -30,7 +32,7 @@ export const HERO_CONSTANTS = {
       icon: "Shield",
       text: "LGPD compliant",
     },
-  ],
+  ] as HeroStat[],
   socialProof: {
     title: "Aprovado por profissionais renomados:",
     users: [
@@ -39,13 +41,13 @@ export const HERO_CONSTANTS = {
         name: "Dr. Silva & Equipe",
         role: "Clínica Odontológica Premium",
       },
-    ],
+    ] as SocialProofUser[],
   },
   floatingElements: {
     support: {
       text: "24/7",
       subtitle: "Suporte",
-    },
+    } as FloatingElement,
   },
   footer: {
     href: "/#profissionais",

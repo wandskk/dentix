@@ -3,3 +3,9 @@ export type NavigationLink = {
   label: string;
   title: string;
 };
+
+export type HeaderButton = {
+  href: string;
+  label: string;
+  title: string;
+};
