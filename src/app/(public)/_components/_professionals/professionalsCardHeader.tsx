@@ -7,13 +7,13 @@ interface ProfessionalsCardHeaderProps {
 
 export function ProfessionalsCardHeader({ clinicName, address }: ProfessionalsCardHeaderProps) {
   return (
-    <div className="flex items-center justify-between">
-      <div>
-        <h3 className="font-semibold">{clinicName}</h3>
-        <p className="text-sm text-gray-500">{address}</p>
-      </div>
-
-      <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold text-gray-900 dark:text-white leading-tight">
+        {clinicName}
+      </h3>
+      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+        {address}
+      </p>
     </div>
   );
 }

@@ -1,28 +1,52 @@
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import React from "react";
-import { ProfessionalsCardImage } from "./professionalsCardImage";
-import { ProfessionalsCardHeader } from "./professionalsCardHeader";
-import { ProfessionalsCardButton } from "./professionalsCardButton";
+import {
+  ProfessionalsCardImage,
+  ProfessionalsCardHeader,
+  ProfessionalsCardButton,
+  ProfessionalsCardStatus,
+  ProfessionalsCardRating,
+  ProfessionalsCardSchedule,
+} from "./index";
 
-export function ProfessionalsCard() {
+export interface ProfessionalsCardProps {
+  clinicName: string;
+  address: string;
+  imageSrc: string;
+  imageAlt: string;
+  rating?: number;
+  reviewCount?: number;
+  isOpen?: boolean;
+  schedule?: string;
+  href: string;
+}
+
+export function ProfessionalsCard({
+  clinicName = "Clínica centro",
+  address = "Rua x, centro, Campo Grande - MS",
+  imageSrc = "/foto1.png",
+  imageAlt = "Clínica Dentix",
+  rating = 4.8,
+  reviewCount = 127,
+  isOpen = true,
+  schedule = "Seg-Sex: 8h às 18h",
+  href = "/",
+}: ProfessionalsCardProps) {
   return (
-    <Card className="p-0 overflow-hidden">
+    <Card className="group relative p-0 overflow-hidden border-0 bg-white/90 backdrop-blur-xl shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl hover:-translate-y-1">
       <CardContent className="p-0">
-        <ProfessionalsCardImage 
-          src="/foto1.png" 
-          alt="Dentix logo" 
-        />
+        <ProfessionalsCardStatus isOpen={isOpen} />
 
-        <div className="p-4 space-y-4">
-          <ProfessionalsCardHeader
-            clinicName="Clínica centro"
-            address="Rua x, centro, Campo Grande - MS"
-          />
+        <ProfessionalsCardImage src={imageSrc} alt={imageAlt} />
 
-          <ProfessionalsCardButton href="/">
+        <div className="p-5 space-y-4">
+          <ProfessionalsCardHeader clinicName={clinicName} address={address} />
+
+          <ProfessionalsCardRating rating={rating} reviewCount={reviewCount} />
+
+          <ProfessionalsCardSchedule schedule={schedule} />
+
+          <ProfessionalsCardButton href={href}>
             Agendar horário
           </ProfessionalsCardButton>
         </div>

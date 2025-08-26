@@ -1,4 +1,4 @@
-import { NavigationLink } from "@/types/navigation";
+import { NavigationLink } from "../_components/_types";
 
 export const HEADER_CONSTANTS = {
   NAVIGATION: {

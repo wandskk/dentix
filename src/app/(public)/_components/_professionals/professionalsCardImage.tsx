@@ -11,15 +11,17 @@ export function ProfessionalsCardImage({
   alt,
 }: ProfessionalsCardImageProps) {
   return (
-    <div className="relative w-full h-48">
+    <div className="relative w-full h-52 overflow-hidden">
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 768px) 100%, (max-width: 1200px) 120px, 150px"
-        className="object-cover"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
         priority
       />
+      {/* Gradient overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
     </div>
   );
 }
