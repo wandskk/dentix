@@ -3,6 +3,7 @@ import { Header } from "./_components/_header/header";
 import { Hero } from "./_components/_hero/index";
 import { Main } from "@/components/layout";
 import { Professionals } from "./_components/_professionals/professionals";
+import { Footer } from "./_components/_footer/index";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
         <Hero />
         <Professionals />
       </Main>
+
+      <Footer />
     </>
   );
 }

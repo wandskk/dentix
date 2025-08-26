@@ -3,10 +3,9 @@ import { HeaderNavigationHamburger } from "./index";
 
 export function HeaderNavigation() {
   return (
-    <>
-      <HeaderNavigationLinks className="hidden md:flex items-center space-x-4" />
-
+    <div className="flex items-center">
+      <HeaderNavigationLinks className="hidden md:flex items-center space-x-6" />
       <HeaderNavigationHamburger />
-    </>
+    </div>
   );
 }
