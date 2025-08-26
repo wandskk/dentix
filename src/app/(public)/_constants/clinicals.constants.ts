@@ -1,15 +1,16 @@
-import { Clinic } from "../_components/_types";
+import { Clinical } from "../_components/_types";
 
-export const PROFESSIONALS_CONSTANTS = {
+export const CLINICALS_CONSTANTS = {
   SECTION: {
-    ID: "profissionais",
-    ARIA_LABELLEDBY: "professionals-section",
+    ID: "clinicals",
+    ARIA_LABELLEDBY: "clinicals-section",
     TITLE: "Clínicas disponíveis",
-    DESCRIPTION: "Encontre a clínica mais próxima de você e agende sua consulta com nossos especialistas",
+    DESCRIPTION:
+      "Encontre a clínica mais próxima de você e agende sua consulta com nossos especialistas",
   },
   CLINICS: [
     {
-      clinicName: "Clínica Centro",
+      clinicalName: "Clínica Centro",
       address: "Rua x, centro, Campo Grande - MS",
       imageSrc: "/foto1.png",
       imageAlt: "Clínica Dentix Centro",
@@ -21,7 +22,7 @@ export const PROFESSIONALS_CONSTANTS = {
       href: "/",
     },
     {
-      clinicName: "Clínica Norte",
+      clinicalName: "Clínica Norte",
       address: "Av. Norte, bairro norte, Campo Grande - MS",
       imageSrc: "/foto1.png",
       imageAlt: "Clínica Dentix Norte",
@@ -33,7 +34,7 @@ export const PROFESSIONALS_CONSTANTS = {
       href: "/",
     },
     {
-      clinicName: "Clínica Sul",
+      clinicalName: "Clínica Sul",
       address: "Rua Sul, bairro sul, Campo Grande - MS",
       imageSrc: "/foto1.png",
       imageAlt: "Clínica Dentix Sul",
@@ -44,5 +45,5 @@ export const PROFESSIONALS_CONSTANTS = {
       specializations: ["Odontologia", "Endodontia"],
       href: "/",
     },
-  ] as Clinic[],
+  ] as Clinical[],
 };

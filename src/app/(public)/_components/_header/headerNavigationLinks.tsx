@@ -1,13 +1,9 @@
-import { cn } from "@/lib/utils/utils";
 import Link from "next/link";
 import { HEADER_CONSTANTS } from "../../_constants/header.constants";
 import { Button } from "@/components/ui/button";
 import { LogIn } from "lucide-react";
-
-interface HeaderNavigationLinksProps {
-  className?: string;
-  onItemClick?: () => void;
-}
+import { HeaderNavigationLinksProps } from "./_types/index";
+import clsx from "clsx";
 
 export function HeaderNavigationLinks({
   className,
@@ -17,7 +13,11 @@ export function HeaderNavigationLinks({
   const session = false;
 
   return (
-    <nav className={cn(className)} aria-label="Navegação principal" role="navigation">
+    <nav
+      className={clsx(className)}
+      aria-label="Navegação principal"
+      role="navigation"
+    >
       <ul className="flex flex-col items-center gap-4 flex-wrap md:flex-row w-full justify-end">
         {LINKS.map((link) => (
           <li key={link.href}>
@@ -43,7 +43,10 @@ export function HeaderNavigationLinks({
               {BUTTONS.LOGGED_IN.LABEL}
             </Link>
           ) : (
-            <Button asChild className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            <Button
+              asChild
+              className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
               <Link
                 href={BUTTONS.LOGGED_OUT.HREF}
                 title={BUTTONS.LOGGED_OUT.TITLE}

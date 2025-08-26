@@ -1,15 +1,8 @@
 import Image from "next/image";
 import React from "react";
+import { ClinicalsCardImageProps } from "../_interfaces";
 
-interface ProfessionalsCardImageProps {
-  src: string;
-  alt: string;
-}
-
-export function ProfessionalsCardImage({
-  src,
-  alt,
-}: ProfessionalsCardImageProps) {
+export function ClinicalsCardImage({ src, alt }: ClinicalsCardImageProps) {
   return (
     <div className="relative w-full h-52 overflow-hidden">
       <Image
@@ -20,7 +13,6 @@ export function ProfessionalsCardImage({
         className="object-cover transition-transform duration-300 group-hover:scale-105"
         priority
       />
-      {/* Gradient overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
     </div>
   );

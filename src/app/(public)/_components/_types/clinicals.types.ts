@@ -1,5 +1,5 @@
-export type Clinic = {
-  clinicName: string;
+export type Clinical = {
+  clinicalName: string;
   address: string;
   imageSrc: string;
   imageAlt: string;
