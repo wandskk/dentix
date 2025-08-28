@@ -1,0 +1,20 @@
+[1mdiff --git a/src/app/(panel)/dashboard/_components/_interfaces/siderbar.interfaces.ts b/src/app/(panel)/dashboard/_components/_interfaces/siderbar.interfaces.ts[m
+[1mindex 876407d..e5d6fa2 100644[m
+[1m--- a/src/app/(panel)/dashboard/_components/_interfaces/siderbar.interfaces.ts[m
+[1m+++ b/src/app/(panel)/dashboard/_components/_interfaces/siderbar.interfaces.ts[m
+[36m@@ -9,6 +9,7 @@[m [mexport interface SidebarContentProps {[m
+ }[m
+ [m
+ export interface SidebarLinkProps {[m
+[32m+[m[32m  span?: string;[m
+   href: string;[m
+   icon: LucideIcon;[m
+   label: string;[m
+[36m@@ -19,7 +20,6 @@[m [mexport interface SidebarLinkProps {[m
+ [m
+ export interface SidebarAsideProps {[m
+   isCollapsed: boolean;[m
+[31m-  children?: React.ReactNode;[m
+ }[m
+ [m
+ export interface SidebarMainContentProps {[m

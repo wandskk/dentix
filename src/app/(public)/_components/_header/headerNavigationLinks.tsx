@@ -1,0 +1,65 @@
+import Link from "next/link";
+import { HEADER_CONSTANTS } from "../../_constants/header.constants";
+import { Button } from "@/components/ui/button";
+import { LogIn } from "lucide-react";
+import { HeaderNavigationLinksProps } from "./_types/index";
+import clsx from "clsx";
+
+export function HeaderNavigationLinks({
+  className,
+  onItemClick,
+}: HeaderNavigationLinksProps) {
+  const { LINKS, BUTTONS } = HEADER_CONSTANTS.NAVIGATION;
+  const session = false;
+
+  return (
+    <nav
+      className={clsx(className)}
+      aria-label="Navegação principal"
+      role="navigation"
+    >
+      <ul className="flex flex-col items-center gap-4 flex-wrap md:flex-row w-full justify-end">
+        {LINKS.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              title={link.title}
+              onClick={onItemClick}
+              className="text-base font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm px-2 py-1"
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+
+        <li>
+          {session ? (
+            <Link
+              href={BUTTONS.LOGGED_IN.HREF}
+              title={BUTTONS.LOGGED_IN.TITLE}
+              onClick={onItemClick}
+              className="text-base font-medium text-gray-700 hover:text-blue-600 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-sm px-2 py-1"
+            >
+              {BUTTONS.LOGGED_IN.LABEL}
+            </Link>
+          ) : (
+            <Button
+              asChild
+              className="transition-all duration-200 hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+            >
+              <Link
+                href={BUTTONS.LOGGED_OUT.HREF}
+                title={BUTTONS.LOGGED_OUT.TITLE}
+                onClick={onItemClick}
+                className="text-base font-medium"
+              >
+                <LogIn className="w-4 h-4 mr-2" />
+                {BUTTONS.LOGGED_OUT.LABEL}
+              </Link>
+            </Button>
+          )}
+        </li>
+      </ul>
+    </nav>
+  );
+}
