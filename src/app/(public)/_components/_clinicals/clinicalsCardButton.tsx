@@ -2,13 +2,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { ClinicalsCardButtonProps } from "../_interfaces";
 
-interface ProfessionalsCardButtonProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-export function ProfessionalsCardButton({ href, children }: ProfessionalsCardButtonProps) {
+export function ClinicalsCardButton({
+  href,
+  children,
+}: ClinicalsCardButtonProps) {
   return (
     <Button
       asChild

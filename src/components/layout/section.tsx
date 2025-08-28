@@ -1,12 +1,10 @@
-import { cn } from "@/lib/utils/utils";
-import { CommonProps } from "@/types/components";
+import { cn } from "@/lib/utils";
+import { CommonComponent } from "@/components/interfaces";
 import React from "react";
 
-type SectionProps = CommonProps & React.HTMLAttributes<HTMLElement>;
-
-export function Section({ children, ...props }: SectionProps) {
+export function Section({ children, className, ...props }: CommonComponent) {
   return (
-    <section className={cn(props.className)} {...props}>
+    <section className={cn(className)} {...props}>
       {children}
     </section>
   );

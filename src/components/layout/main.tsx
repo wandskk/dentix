@@ -1,10 +1,8 @@
-import { cn } from "@/lib/utils/utils";
-import { CommonProps } from "@/types/components";
+import { cn } from "@/lib/utils";
+import { CommonComponent } from "@/components/interfaces";
 import React from "react";
 
-type MainProps = CommonProps & React.HTMLAttributes<HTMLElement>;
-
-export function Main({ children, className, ...props }: MainProps) {
+export function Main({ children, className, ...props }: CommonComponent) {
   return (
     <main className={cn(className)} {...props}>
       {children}
