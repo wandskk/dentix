@@ -3,10 +3,12 @@ import { Logo } from "@/components/common/logo";
 import { SidebarToggleButton } from "./sidebarToggleButton";
 import { SidebarAsideProps } from "../../_components/_interfaces/";
 import clsx from "clsx";
+import { SidebarNav } from "./sidebarNav";
+import { Aside } from "@/components/layout";
 
-export function SidebarAside({ isCollapsed, children }: SidebarAsideProps) {
+export function SidebarAside({ isCollapsed }: SidebarAsideProps) {
   return (
-    <aside
+    <Aside
       className={clsx(
         "flex flex-col border-r bg-background transition-all duration-300 p-4 h-full",
         {
@@ -24,7 +26,8 @@ export function SidebarAside({ isCollapsed, children }: SidebarAsideProps) {
         {!isCollapsed && <Logo />}
         <SidebarToggleButton isCollapsed={isCollapsed} />
       </div>
-      {children}
-    </aside>
+
+      <SidebarNav className="mt-4" />
+    </Aside>
   );
 }

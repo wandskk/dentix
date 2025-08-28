@@ -5,8 +5,6 @@ import Link from "next/link";
 import { SidebarLinkProps } from "../_interfaces";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { useAppDispatch } from "../../_hooks";
-import { closeMobileSheet } from "../../_store/_sidebar/sidebarActions";
 
 export function SidebarLink({
   href,
@@ -16,18 +14,12 @@ export function SidebarLink({
   isCollapsed,
 }: SidebarLinkProps) {
   const pathname = usePathname();
-  const dispatch = useAppDispatch();
   const isCurrentPathname = pathname === href;
-
-  const handleClick = () => {
-    dispatch(closeMobileSheet());
-  };
 
   return (
     <Link
       href={href}
       title={title}
-      onClick={handleClick}
       className={clsx(
         "flex items-center gap-2 px-3 py-2 rounded-md text-black transition-colors",
         { "bg-blue-500 text-white": isCurrentPathname },

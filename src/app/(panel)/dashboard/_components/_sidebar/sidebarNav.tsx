@@ -1,12 +1,17 @@
 import React from "react";
 import { SIDEBAR_CONSTANTS } from "../../_constants";
 import { SidebarNavList } from "./sidebarNavList";
+import clsx from "clsx";
 
-export function SidebarNav() {
+interface SidebarNavProps {
+  className?: string;
+}
+
+export function SidebarNav({ className }: SidebarNavProps) {
   const { nav } = SIDEBAR_CONSTANTS;
 
   return (
-    <nav className="flex flex-col gap-2 p-4 py-0">
+    <nav className={clsx("flex flex-col gap-2", className)}>
       <SidebarNavList listLinks={nav} />
     </nav>
   );

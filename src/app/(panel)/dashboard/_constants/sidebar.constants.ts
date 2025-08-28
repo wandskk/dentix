@@ -3,10 +3,11 @@ import { Banknote, CalendarCheck2, Folder, Settings } from "lucide-react";
 export const SIDEBAR_CONSTANTS = {
   nav: [
     {
+      span: "Painel",
       href: "/dashboard",
       icon: CalendarCheck2,
-      label: "Agendamentos",
-      title: "Acessar agendamentos",
+      label: "Dashboard",
+      title: "Acessar dashboard",
     },
     {
       href: "/dashboard/services",
@@ -15,6 +16,7 @@ export const SIDEBAR_CONSTANTS = {
       title: "Acessar serviços",
     },
     {
+      span: "Minha conta",
       href: "/dashboard/profile",
       icon: Settings,
       label: "Meu perfil",

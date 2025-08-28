@@ -1,15 +1,15 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useSidebarToggle } from "../../_hooks";
+import { useSidebar } from "../../_hooks";
 import { SidebarToggleButtonProps } from "../../_components/_interfaces/";
 
 export function SidebarToggleButton({ isCollapsed }: SidebarToggleButtonProps) {
-  const { handleToggle } = useSidebarToggle();
+  const { toggleSidebar } = useSidebar();
 
   return (
     <Button
-      onClick={handleToggle}
+      onClick={toggleSidebar}
       className="bg-gray-100 hover:bg-gray-50 text-zinc-900 self-end cursor-pointer"
     >
       {isCollapsed ? (

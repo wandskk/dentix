@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { SidebarState } from '../../_types/sidebar.types';
 
 const initialState: SidebarState = {
-  isCollapsed: true,
+  isCollapsed: false,
   isMobileSheetOpen: false,
 };
 

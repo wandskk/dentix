@@ -9,6 +9,7 @@ export interface SidebarContentProps {
 }
 
 export interface SidebarLinkProps {
+  span?: string;
   href: string;
   icon: LucideIcon;
   label: string;
@@ -19,7 +20,6 @@ export interface SidebarLinkProps {
 
 export interface SidebarAsideProps {
   isCollapsed: boolean;
-  children?: React.ReactNode;
 }
 
 export interface SidebarMainContentProps {
